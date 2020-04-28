@@ -36,3 +36,4 @@ ADD xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 # Use the default production configuration
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
+RUN a2enmod rewrite
