@@ -6,14 +6,14 @@ services:
     build:
       context: ~/docker/lamp-php53/php
     ports:
-    - 127.0.0.1:83:80
+    - 127.0.0.1:80:80
     volumes:
     - ./htdocs:/var/www/html
 
   mariadb:
     image: mariadb:10.4
     ports:
-    - 127.0.0.1:3303:3306
+    - 127.0.0.1:3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: rootroot
       MYSQL_DATABASE: testdb
@@ -26,7 +26,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     ports:
-    - 127.0.0.1:8083:80
+    - 127.0.0.1:8080:80
     environment:
       PMA_HOST: mariadb
       PMA_USER: root
