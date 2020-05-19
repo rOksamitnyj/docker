@@ -37,7 +37,7 @@ RUN apk add -U --no-cache \
   && mv composer.phar composer \
   && rm -rf /var/cache/apk/*
 
-ADD xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
-ADD custom.ini /usr/local/etc/php/conf.d/custom.ini
+ADD conf.d/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+ADD conf.d/custom.ini /usr/local/etc/php/conf.d/custom.ini
 
 
