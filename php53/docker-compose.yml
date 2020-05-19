@@ -4,7 +4,7 @@ services:
 
   php:
     build:
-      context: ~/docker/lamp-php53/php
+      context: ~/docker/php53/php
     ports:
     - 127.0.0.1:83:80
     volumes:
@@ -24,7 +24,8 @@ services:
     - ./databases/conf.d:/etc/mysql/conf.d
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
+    build:
+      context: ~/docker/phpmyadmin
     ports:
     - 127.0.0.1:8083:80
     environment:
